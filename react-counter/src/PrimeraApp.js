@@ -1,18 +1,13 @@
 import React, { Fragment } from 'react';
 
 
-function PrimeraApp() {
-
-    const saludo ={
-        nombre : 'Fran',
-        edad: 23
-    }
+function PrimeraApp({name, edad}) {
 
 
     return (
         <>
-            <h1>{saludo.nombre}</h1>
-            <small>{saludo.edad}</small>
+            <h1>{name}</h1>
+            <small>{edad}</small>
             <p>Mi primera aplicación</p>
         </>
     )
