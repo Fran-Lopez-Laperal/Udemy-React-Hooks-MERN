@@ -1,17 +1,22 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types'
 
 
-function PrimeraApp({name, edad}) {
+function PrimeraApp({saludo}) {
 
-
+   
     return (
         <>
-            <h1>{name}</h1>
-            <small>{edad}</small>
+            <h1>{saludo}</h1>
             <p>Mi primera aplicación</p>
         </>
     )
 
+}
+
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string,
+    name: PropTypes.string.isRequired
 }
 
 export default PrimeraApp
