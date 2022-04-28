@@ -11,5 +11,5 @@ const divRoot = document.querySelector('#root')
 
 ReactDOM.render(
     /* <PrimeraApp saludo="Hola Mundo"/>,*/
-    <CounterApp value={ 12 } />,
+    <CounterApp value={ 10 } />,
     divRoot)
