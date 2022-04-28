@@ -2,9 +2,8 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types'
 
 
-function PrimeraApp({saludo, subtitulo}) {
+function PrimeraApp({ saludo, subtitulo }) {
 
-   
     return (
         <>
             <h1>{saludo}</h1>
@@ -16,13 +15,11 @@ function PrimeraApp({saludo, subtitulo}) {
 
 PrimeraApp.propTypes = {
     saludo: PropTypes.string.isRequired
-
 }
 
 PrimeraApp.defaultProps = {
     subtitulo: 'soy un subtitulo'
 }
-
 
 
 export default PrimeraApp
