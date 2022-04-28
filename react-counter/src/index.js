@@ -1,6 +1,8 @@
+
+
+
 import React from "react"
-import ReactDOM from "react-dom"
-// import PrimeraApp from "./PrimeraApp"
+import {createRoot} from "react-dom/client"
 import './index.css'
 import CounterApp from "./CounterApp"
 
@@ -8,8 +10,6 @@ import CounterApp from "./CounterApp"
 
 
 const divRoot = document.querySelector('#root')
+const root = createRoot(divRoot)
 
-ReactDOM.render(
-    /* <PrimeraApp saludo="Hola Mundo"/>,*/
-    <CounterApp value={ 10 } />,
-    divRoot)
+root.render(<CounterApp value={10} />)
