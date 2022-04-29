@@ -6,13 +6,13 @@ describe('pruebas en desetructuración', () => {
 
     test('debe retornar un string y un numero', () => { 
 
-        const [letras, numero] = retornaArreglo()
+        const [letras, numeros] = retornaArreglo()
 
-        expect(letras).toEqual('ABC')
+        expect(letras).toBe('ABC')
         expect(typeof letras).toBe('string')
 
-        expect(numero).toEqual(123)
-        expect(typeof numero).toBe('number')
+        expect(numeros).toBe(123)
+        expect(typeof numeros).toBe('number')
 
      })
  })
