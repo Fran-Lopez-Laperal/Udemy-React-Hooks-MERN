@@ -1,12 +1,12 @@
-function GridItem({id, title, url}){
+function GridItem({ id, title, url }) {
 
-  
-    return(
-        <div className="card">
-          <img src={url} alt={title}/>
-          <p>{title}</p>
-        </div>
-    )
+
+  return (
+    <div className="card">
+      <img src={url} alt={title} />
+      <p>{title}</p>
+    </div>
+  )
 }
 
 export default GridItem
