@@ -12,7 +12,7 @@ function AddCategory({ setCategories }) {
     function handlesubmit(e) {
         e.preventDefault();
         if (inputValue.trim().length > 2) {
-            setCategories(cats => [...cats, inputValue]);
+            setCategories(cats => [ inputValue,...cats]);
             setInputValue('')
         }
     }
@@ -21,7 +21,7 @@ function AddCategory({ setCategories }) {
         <>
             <form onSubmit={handlesubmit}>
                 <input
-                    onChange={handleChange}
+                    onChange={handleChange} 
                     type="text"
                     value={inputValue}
                 />
