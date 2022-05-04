@@ -1,4 +1,6 @@
-function GridItem({ id, title, url }) {
+import PropTypes from 'prop-types';
+
+function GridItem({ title, url }) {
 
 
   return (
@@ -9,4 +11,10 @@ function GridItem({ id, title, url }) {
   )
 }
 
+GridItem.prototype = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired 
+}
+
 export default GridItem
+
