@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import Message from "./Message"
+import './effects.css'
 
 function SimpleForm() {
 
@@ -12,22 +14,22 @@ function SimpleForm() {
     const { name, email } = formState
 
     useEffect(() => {
-        console.log('hey')
+        // console.log('hey')
 
-    },[])
-
-    useEffect(() => {
-        console.log('form cambio')
-
-    },[setFormState])
+    }, [])
 
     useEffect(() => {
-        console.log('email cambio')
+        // console.log('form cambio')
 
-    },[email])
+    }, [setFormState])
+
+    useEffect(() => {
+        // console.log('email cambio')
+
+    }, [email])
 
 
-    function handleChange({target}) {
+    function handleChange({ target }) {
 
         setFormState({
             ...formState,
@@ -40,28 +42,30 @@ function SimpleForm() {
         <>
             <h1>useEffect</h1>
             <hr />
-        <div>
-        <input
-                type="text"
-                name="name"
-                className="form-control"
-                placeholder="Tu nombre"
-                autoComplete="off"
-                value={name}
-                onChange={handleChange}
-            />
-        </div>
-        <div>
-        <input
-                type="text"
-                name="email"
-                className="form-control"
-                placeholder="email@email.com"
-                autoComplete="off"
-                value={email}
-                onChange={handleChange}
-            />
-        </div>
+            <div>
+                <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    placeholder="Tu nombre"
+                    autoComplete="off"
+                    value={name}
+                    onChange={handleChange}
+                />
+            </div>
+            <div>
+                <input
+                    type="text"
+                    name="email"
+                    className="form-control"
+                    placeholder="email@email.com"
+                    autoComplete="off"
+                    value={email}
+                    onChange={handleChange}
+                />
+            </div>
+
+            {(name === '123') && <Message />}
         </>
     )
 }
