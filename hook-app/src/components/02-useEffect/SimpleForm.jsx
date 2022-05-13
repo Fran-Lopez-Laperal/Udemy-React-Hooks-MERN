@@ -19,12 +19,12 @@ function SimpleForm() {
     }, [])
 
     useEffect(() => {
-        // console.log('form cambio')
+        // console.log('form cambió')
 
-    }, [setFormState])
+    }, [formState])
 
     useEffect(() => {
-        // console.log('email cambio')
+        // console.log('email cambió')
 
     }, [email])
 
