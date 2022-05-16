@@ -1,4 +1,6 @@
 import { useRef } from "react"
+import './FocusScreen.css'
+
 
 function FocusScreen() {
 
@@ -11,7 +13,7 @@ function FocusScreen() {
     console.log(inputRef)
     
     return (
-        <div>
+        <div className="focus-screen">
             <h1>Screen</h1>
             <hr/>
 

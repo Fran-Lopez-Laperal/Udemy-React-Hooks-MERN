@@ -10,7 +10,7 @@ function MultipleCustomHook() {
     // console.log(state)
 
     const { author, quote } = !!data && data[0];
-    console.log(author, quote)
+    // console.log(author, quote)
 
     // console.log(data);
     return (
@@ -36,7 +36,7 @@ function MultipleCustomHook() {
 
 
             <button 
-            className='btn btn-primary'
+            className='btn btn-primary mb-5'
             onClick={increment}
             >
                 Siguiente quote
