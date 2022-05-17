@@ -18,7 +18,7 @@ function MemoHook() {
             <h3>Counter: <small> {counter}</small> </h3>
             <hr />
 
-            <p>{procesoPesado(counter)}</p>
+            <p>{memoProcesoPesado}</p>
 
             <button className="btn btn-primary ml-5" onClick={increment}>
                 +1
