@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import CallbackHook from './components/06-Memos/CaalBack';
+// import CallbackHook from './components/06-Memos/CaalBack';
+import { Padre } from './components/07-tarea-memo/Padre';
 // import MemoHook from './components/06-Memos/MemoHook';
 // import MultipleCustomHook from './components/03-examples/MultipleCustomHooks';
 // import FocusScreen from './components/04-useRef/FocusScreen';
@@ -17,7 +18,7 @@ import CallbackHook from './components/06-Memos/CaalBack';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <CallbackHook/>
+  <Padre/>
   </React.StrictMode>
 );
 

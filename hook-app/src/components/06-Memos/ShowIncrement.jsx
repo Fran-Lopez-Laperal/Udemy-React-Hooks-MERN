@@ -1,6 +1,6 @@
 import { memo } from "react"
 
-const ShowIncrement = memo (({ increment }) =>  {
+const ShowIncrement = memo(({ increment }) => {
 
     console.log('me volví a generar')
 
@@ -8,7 +8,7 @@ const ShowIncrement = memo (({ increment }) =>  {
         <button
             className="btn btn-primary"
             onClick={() => {
-                increment( 5 )
+                increment(5)
             }}
         >
             Incrementar
