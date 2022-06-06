@@ -1,28 +1,46 @@
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
+import useForm from '../../Hooks/useForm';
 
 import './styles.css'
 import { todoReducer } from './todoReducer';
 
-const initialState = [{
-    id: new Date().getTime(),
-    desc: 'Aprender React',
-    done: false
-}];
+
+
+const init = () => {
+    return JSON.parse(localStorage.getItem('todos')) || []
+    // return [{
+    //     id: new Date().getTime(),
+    //     desc: 'Aprender React',
+    //     done: false
+    // }];
+}
 
 export const TodoApp = () => {
 
 
-    const [todos, dispatch] = useReducer(todoReducer, initialState)
+    const [todos, dispatch] = useReducer(todoReducer, [], init)
 
-    console.log(todos)
+    const [{ description }, handleChange, reset] = useForm({
+        description: ''
+    });
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos))
+    }, [todos])
 
 
-    const handlesubmit = (e) => {
+
+
+    const handleSubmit = (e) => {
         e.preventDefault()
-   
+
+        if (description.trim().length <= 3) {
+            return
+        }
+
         const newTodo = {
             id: new Date().getTime(),
-            desc:  'Nueva tarea',
+            desc: description,
             done: false
         };
 
@@ -31,6 +49,7 @@ export const TodoApp = () => {
             payload: newTodo
         }
         dispatch(action)
+        reset();
     }
 
     return (
@@ -60,13 +79,15 @@ export const TodoApp = () => {
                     <h4>Agregar TODO</h4>
                     <hr />
 
-                    <form  onSubmit={handlesubmit}>
+                    <form onSubmit={handleSubmit}>
                         <input
                             type="text"
                             name="description"
                             className='form-control'
-                            placeholder='Aprender'
+                            placeholder='Aprender...'
                             autoComplete='off'
+                            value={description}
+                            onChange={handleChange}
                         />
                         <button type='submit' className='btn btn-outline-primary mt-1 btn-block'
                         >
