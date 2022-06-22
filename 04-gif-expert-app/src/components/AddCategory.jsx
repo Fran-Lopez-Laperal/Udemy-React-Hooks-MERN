@@ -10,7 +10,6 @@ function AddCategory({ onNewCategory }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        if (inputValue.length <= 1) return
         onNewCategory(inputValue)
         setInputValue('')
     }
