@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function AddCategory({ onNewCategory }) {
 
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue, setInputValue] = useState(' ')
 
     function handleInputChange(e) {
         setInputValue(e.target.value)
